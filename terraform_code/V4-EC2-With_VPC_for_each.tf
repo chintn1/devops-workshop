@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "demo-server" {
     ami = "ami-0f58b397bc5c1f2e8"
     instance_type = "t2.micro"
-    key_name = "dpp"
+    key_name = "k8s"
     //security_groups = [ "demo-sg" ]
     vpc_security_group_ids = [aws_security_group.demo-sg.id]
     subnet_id = aws_subnet.dpp-public-subnet-01.id 
